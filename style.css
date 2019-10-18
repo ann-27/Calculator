@@ -1,0 +1,22 @@
+header{
+  font-size:45px;
+  color:grey;
+
+}
+#screen{
+  height:52px;
+  background-color:#000;
+  margin:3px;
+  font-size:45px;
+  text-align:left;
+  overflow:none;
+  background-color:white;
+}
+
+button{
+  height:70px;
+  width:90px;
+  color: black;
+  background-color:#ac8fb8;
+  margin : 0px;
+}

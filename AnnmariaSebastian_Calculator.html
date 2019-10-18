@@ -1,0 +1,87 @@
+<DOCTYPE html>
+<html lang="en">
+<!--Annmaria Sebastian/ Calculator-->
+<head>
+	<meta charset="utf-8" />
+	<title> Annmaria Sebastian_Calculator</title>
+	<link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+	<header>
+		Calculator
+		<br>
+	</header>
+
+	<div id = 'Calculator'>
+		<div id = 'screen'></div>
+		<button id = 'clear'>C</button>
+		<div id = "row1">
+			<button id = 'seven'>7</button>
+			<button id = 'eight'>8</button>
+			<button id = 'nine'>9</button>
+			<button id = 'ADD'>+</button>
+		</div>
+		<div id ="row2">
+			<button id = 'four'>4</button>
+			<button id = 'five'>5</button>
+			<button id = 'six'>6</button>
+			<button id = 'SUB'>-</button>
+		</div>
+		<div id = "row3">
+			<button id = 'one'>1</button>
+			<button id = 'two'>2</button>
+			<button id = 'three'>3</button>
+			<button id = 'DIVIDE'>/</button>
+		</div>
+		<div id ="row4">
+			<button id = 'zero'>0</button>
+			<button id = 'decimal'>.</button>
+			<button id = 'equals'>=</button>
+			<button id = 'MULTIPLY'>X</button>
+		</div>
+	</div>
+
+	<script>
+		var display = document.getElementById("screen");
+		function screenDisplay(x){ 
+			display.innerHTML += x ;
+		}
+
+		function result(){
+			var answer =eval(display.innerHTML);
+			display.innerHTML= answer;
+		}
+
+		function clearScreen(){
+			display.innerHTML="";
+		}
+
+		//Numbers
+		document.getElementById("zero").addEventListener("click",function(){ screenDisplay(0); });
+		document.getElementById("one").addEventListener("click",function(){ screenDisplay(1); });
+		document.getElementById("two").addEventListener("click",function(){ screenDisplay(2); });
+		document.getElementById("three").addEventListener("click",function(){ screenDisplay(3); });
+		document.getElementById("four").addEventListener("click",function(){ screenDisplay(4); });
+		document.getElementById("five").addEventListener("click",function(){ screenDisplay(5); });
+		document.getElementById("six").addEventListener("click",function(){ screenDisplay(6); });
+		document.getElementById("seven").addEventListener("click",function(){ screenDisplay(7); });
+		document.getElementById("eight").addEventListener("click",function(){ screenDisplay(8); });
+		document.getElementById("nine").addEventListener("click",function(){ screenDisplay(9); });
+
+
+		//Operators and controls
+		document.getElementById("ADD").addEventListener("click",function(){ screenDisplay("+"); });
+		document.getElementById("SUB").addEventListener("click",function(){ screenDisplay("-"); });	
+		document.getElementById("MULTIPLY").addEventListener("click",function(){ screenDisplay("*"); });
+		document.getElementById("DIVIDE").addEventListener("click",function(){ screenDisplay("/"); });
+		document.getElementById("decimal").addEventListener("click",function(){ screenDisplay("."); });
+		document.getElementById("equals").addEventListener("click",function(){result(); });
+		document.getElementById("clear").addEventListener("click",function(){clearScreen();; });
+
+	</script>
+
+</body>
+</html>
+
